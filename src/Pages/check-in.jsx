@@ -32,7 +32,7 @@ const CheckInCheckOut = () => {
     const fetchAttendance = async () => {
       try {
         const email = Cookies.get("userEmail");
-        const response = await axios.get("http://localhost:5000/api/employees");
+        const response = await axios.get("http://16.170.204.4:5000/api/employees");
         const employee = response.data.find(emp => emp.email === email);
         if (employee) {
           const todayAttendance = employee.attendance.find(

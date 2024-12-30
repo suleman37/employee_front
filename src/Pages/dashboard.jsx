@@ -59,7 +59,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/employees");
+        const response = await axios.get("http://16.170.204.4:5000/api/employees");
         const employeeId = "676ea5d4042396131aecd9ca"; // Example employee ID
         const transformedData = transformDataForEmployee(response.data, employeeId);
         setEmployeeMonthlyPerformanceData(transformedData.monthly);
