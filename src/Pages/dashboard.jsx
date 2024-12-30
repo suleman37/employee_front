@@ -12,8 +12,9 @@ const transformDataForEmployee = (data, employeeId) => {
   data.forEach((employee) => {
     if (employee._id === employeeId) {
       employee.attendance.forEach((record) => {
-        const month = new Date(record.date).toLocaleString('default', { month: 'short' });
-        const week = `Week ${Math.ceil(new Date(record.date).getDate() / 7)}`;
+        const date = new Date(record.date);
+        const month = date.toLocaleString('default', { month: 'short' });
+        const week = `Week ${Math.ceil(date.getDate() / 7)}`;
 
         if (!monthlyPerformance[month]) {
           monthlyPerformance[month] = { month, performance: 0 };

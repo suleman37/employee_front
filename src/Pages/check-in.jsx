@@ -118,15 +118,15 @@ const CheckInCheckOut = () => {
         backgroundColor: "#fff",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "start",
         justifyContent: "center",
         padding: 3,
       }}
     >
-      <Typography variant="h4" gutterBottom>
-        Check-In/Check-Out
+      <Typography variant="h4" gutterBottom align="left" sx={{ mb: 10 }}>
+       <b>Check-In/Check-Out</b>
       </Typography>
-      <Grid container spacing={3} justifyContent="center" sx={{ mb: 3 }}>
+      <Grid container spacing={3} justifyContent="flex-start" sx={{ mb: 3 }}>
         <Grid item xs={12} sm={4}>
           <Paper
             elevation={3}
